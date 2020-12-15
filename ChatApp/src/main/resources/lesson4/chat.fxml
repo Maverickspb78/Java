@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="lesson4.ChatController">
+    <MenuBar style="-fx-background-color: #FFFF00; -fx-border-color: #000000;" VBox.vgrow="NEVER">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" onAction="#quit" text="Quit" />
+        </Menu>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="607.0" prefWidth="377.0" style="-fx-background-color: #8BF37A;"
+                VBox.vgrow="ALWAYS">
+        <VBox prefHeight="434.0" prefWidth="640.0" style="-fx-background-color: #8BF37A;">
+            <TextArea fx:id="output" editable="false" prefHeight="426.0" prefWidth="640.0" style="
+            -fx-control-inner-background: #8BF37A; -fx-border-color: #000000;" text="&#10;" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+                <TextField fx:id="input" onAction="#send" prefHeight="54.0" prefWidth="583.0" style="
+                -fx-background-color: #FFFDD0; -fx-border-color: #000000;" />
+                <Button mnemonicParsing="false" onAction="#send" prefHeight="64.0" prefWidth="97.0" style="
+                -fx-background-color: #E0FFFF; -fx-border-color: #000000;" text="SEND" />
+            </HBox>
+        </VBox>
+    </AnchorPane>
+</VBox>
