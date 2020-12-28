@@ -4,16 +4,17 @@ package lesson4;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class EchoServer {
 
-    private boolean running;
     private final ConcurrentLinkedDeque<SerialHandler> clients = new ConcurrentLinkedDeque<>();
+    private boolean running;
 
-    public EchoServer() {
 
-        System.out.println(MockAuthServiceImpl.getInstance().getUserDao());
+    public EchoServer() throws SQLException, ClassNotFoundException {
+
 
         running = true;
         try (ServerSocket server = new ServerSocket(8189)) {
@@ -23,16 +24,18 @@ public class EchoServer {
                 Socket socket = server.accept();
                 System.out.println("Client accepted!");
                 SerialHandler handler = new SerialHandler(socket, this);
-                clients.add(handler);
+
                 new Thread(handler).start();
                 System.out.println("Client info: " + socket.getInetAddress());
+                System.out.println(handler.getUserName());
+                clients.add(handler);
             }
         } catch (Exception e) {
             System.out.println("Server crashed");
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
         new EchoServer();
     }
 
