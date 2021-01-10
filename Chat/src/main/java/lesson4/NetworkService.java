@@ -10,6 +10,8 @@ public class NetworkService {
     private static NetworkService instance;
     private final ObjectInputStream is;
     private final ObjectOutputStream os;
+//    private String username;
+
 
     private NetworkService() {
         try {
@@ -32,6 +34,7 @@ public class NetworkService {
         return (Message) is.readObject();
     }
 
+
     public String getUserName() {
         try {
             return ((Message) is.readObject()).getAuthor();
@@ -48,6 +51,11 @@ public class NetworkService {
 
     public ObjectInputStream getInputStream() {
         return is;
+    }
+
+    public void close() throws IOException {
+        os.close();
+        is.close();
     }
 
 }

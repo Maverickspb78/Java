@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #8BF37A;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesson4.RegistrationController">
+    <Label fx:id="msgReg" layoutX="185.0" layoutY="95.0" textFill="#ff0505" />
+    <TextField fx:id="login" layoutX="179.0" layoutY="112.0" prefHeight="52.0" prefWidth="242.0" promptText="Придумайте логин" style="-fx-background-color: #FFFDD0; -fx-background-radius: 10;" />
+    <TextField fx:id="password" layoutX="179.0" layoutY="180.0" prefHeight="52.0" prefWidth="242.0" promptText="Придумайте Пасс" style="-fx-background-color: #FFFDD0; -fx-background-radius: 10;" />
+   <TextField fx:id="nikName" layoutX="179.0" layoutY="248.0" prefHeight="52.0" prefWidth="242.0" promptText="Придумайте никнэйме" style="-fx-background-color: #FFFDD0; -fx-background-radius: 10;" />
+    <Label layoutX="103.0" layoutY="123.0" prefHeight="30.0" prefWidth="70.0" text="Login" />
+    <Label layoutX="103.0" layoutY="189.0" prefHeight="30.0" prefWidth="70.0" text="Password" />
+   <Label layoutX="103.0" layoutY="259.0" prefHeight="30.0" prefWidth="70.0" text="Nikname" />
+
+    <Button layoutX="242.0" layoutY="329.0" mnemonicParsing="false" onAction="#enter" prefHeight="48.0" prefWidth="117.0" style="-fx-background-color: #E0FFFF; -fx-background-radius: 30;" text="Зарегистрировать" />
+    <AnchorPane prefHeight="84.0" prefWidth="600.0" style="-fx-background-color: #FFFF00;">
+        <children>
+            <Text layoutX="236.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat Box" wrappingWidth="128.0">
+                <font>
+                    <Font name="Times New Roman Bold" size="30.0" />
+                </font>
+            </Text>
+        </children>
+    </AnchorPane>
+</AnchorPane>
