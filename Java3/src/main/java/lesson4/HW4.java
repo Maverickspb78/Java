@@ -1,11 +1,11 @@
 package lesson4;
 
-public class Test {
+public class HW4 {
     private final Object mon = new Object();
     private volatile char currentLetter = 'A';
 
     public static void main(String[] args) {
-        Test w = new Test();
+        HW4 w = new HW4();
         Thread t1 = new Thread(() -> {
             w.printA();
         });
